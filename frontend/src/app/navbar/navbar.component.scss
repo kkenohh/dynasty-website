@@ -1,3 +1,5 @@
+@import '../../styles.scss';
+
 :host {
   display: flex;
 }
@@ -8,6 +10,16 @@
 
 .top-nav {
   line-height: 64px;
+  background-color: $color1;
+}
+
+.top-nav > li {
+  color: $color3;
+
+  &:hover {
+    background-color: $color2;
+    color: $color3;
+  }
 }
 
 .logo {
@@ -15,32 +27,20 @@
   height: 64px;
   padding-right: 24px;
   line-height: 64px;
-  background: #001529;
+  background: $color1;
 }
 
-.logo img {
-  display: inline-block;
-  height: 32px;
-  width: 32px;
-  vertical-align: middle;
-}
-
-.logo h1 {
-  display: inline-block;
-  margin: 0 0 0 15px;
-  color: #fff;
+.name {
+  color: $color3;
   font-weight: 600;
   font-size: 20px;
-  font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
-  vertical-align: middle;
+  margin-left: 15px;
 }
 
-nz-content {
-  padding: 24px 50px;
+.header {
+  background: $color1;
 }
 
-.inner-content {
-  padding: 24px;
-  background: #fff;
-  height: 100%;
+.active-link {
+  background-color: $color2 !important;
 }
