@@ -1,0 +1,8 @@
+<header class="app-header" role="banner">
+  <div class="container">
+    <a class="brand" [href]="brandHref">{{ brand }}</a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a *ngFor="let item of items" class="nav-link" [href]="item.href">{{ item.title }}</a>
+    </nav>
+  </div>
+</header>
