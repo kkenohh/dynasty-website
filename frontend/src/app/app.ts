@@ -1,13 +1,13 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from '../modules/header/header.component';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { Navbar } from './navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent],
+  standalone: true,
+  imports: [RouterOutlet, NzLayoutModule, Navbar],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
-export class App {
-  protected readonly title = signal('frontend');
-}
+export class App {}
